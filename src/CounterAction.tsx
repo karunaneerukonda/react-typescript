@@ -2,7 +2,8 @@ import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import React,{useState} from "react";
 
-const Counter = () =>{
+const CounterAction = () =>{
+
     const [counter,setCounter] = useState(0)
     const [amount,setAmount] = useState(0)
     const handleInputChange = (e:React.ChangeEvent<HTMLInputElement>) =>{
@@ -23,8 +24,6 @@ const Counter = () =>{
     }
     return (
         <div>
-        <h1>Counter Works</h1><br/>
-        <h2>Count : {counter}</h2><br/>
         <TextField id="standard-basic" label="Amount" variant="standard"  value={amount} onChange={handleInputChange} color = "secondary"/><br/><br/>
         <Button variant="contained" onClick={handleIncrement}>Increment</Button><br/><br/>
         <Button variant="contained" onClick={handleDecrement}>Decrement</Button><br/><br/>
@@ -36,4 +35,4 @@ const Counter = () =>{
     )
 }
 
-export default Counter
+export default CounterAction;
